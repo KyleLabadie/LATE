@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Old Money Watches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #013220;
+      --ivory: #F8F4E3;
+      --gold: #D4AF37;
+      --charcoal: #1C1C1C;
+      --gray-steel: #5C5C5C;
+      --beige: #E5D5B0;
+      --bordeaux: #4B1E2F;
+      --white-soft: #FBF9F3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--green-dark);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--ivory);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      background-color: var(--ivory);
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero button {
+      background-color: var(--gold);
+      border: none;
+      color: var(--charcoal);
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .watches {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+      background-color: var(--white-soft);
+    }
+
+    .watch-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+    }
+
+    .watch-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+    }
+
+    .watch-card p {
+      color: var(--gray-steel);
+      font-weight: 600;
+    }
+
+    .dark-mode {
+      background-color: var(--charcoal);
+      color: var(--ivory);
+    }
+
+    .dark-mode header {
+      background-color: var(--charcoal);
+    }
+
+    .dark-mode .hero {
+      background-color: var(--green-dark);
+      color: var(--ivory);
+    }
+
+    .dark-mode .watch-card {
+      background-color: var(--green-dark);
+      color: var(--ivory);
+    }
+
+    .toggle-mode {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--bordeaux);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Old Money Watches</h1>
+    <nav>
+      <a href="#">Acheter</a>
+      <a href="#">Vendre</a>
+      <a href="#">Échanger</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Vendez et achetez des montres de luxe</h2>
+    <button>Commencer</button>
+  </section>
+  <section class="watches">
+    <div class="watch-card">
+      <h3>Rolex Submariner</h3>
+      <p>$10,300</p>
+    </div>
+    <div class="watch-card">
+      <h3>Omega Speedmaster</h3>
+      <p>$57,770</p>
+    </div>
+    <div class="watch-card">
+      <h3>Patek Philippe Nautilus</h3>
+      <p>$75,900</p>
+    </div>
+  </section>
+  <button class="toggle-mode" onclick="document.body.classList.toggle('dark-mode')">Mode sombre</button>
+</body>
+</html>
